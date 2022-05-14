@@ -1,9 +1,13 @@
 #!/bin/bash
 
 if [[ -z "${CLOUDCMD_USR}" ]] || [[ -z "${CLOUDCMD_PASS}" ]]; then
-    MY_SCRIPT_VARIABLE="Some default value because DEPLOY_ENV is undefined"
+    
+    echo "WARNING: Cloud Commander launched without authentication"
+    
+    cloudcmd
+    
 else
-  MY_SCRIPT_VARIABLE="${CLOUDCMD_USR}"
+    echo "Authenticated launch"
+    cloudcmd --username ${CLOUDCMD_USR} --password ${CLOUDCMD_PASS} --auth --save --no-server
+    cloudcmd
 fi
-
-echo $MY_SCRIPT_VARIABLE

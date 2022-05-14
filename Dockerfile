@@ -2,4 +2,6 @@ FROM node:lts-buster-slim
 
 RUN  npm i cloudcmd -g
 
-CMD [ "cloudcmd" ]
+COPY entrypoint.sh /entrypoint.sh
+
+CMD [ "/entrypoint.sh" ]
