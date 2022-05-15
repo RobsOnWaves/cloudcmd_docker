@@ -8,6 +8,6 @@ if [[ -z "${CLOUDCMD_USR}" ]] || [[ -z "${CLOUDCMD_PASS}" ]]; then
     
 else
     echo "Authenticated launch"
-    cloudcmd --username ${CLOUDCMD_USR} --password ${CLOUDCMD_PASS} --auth --save --no-server --root /mnt/ls
-    cloudcmd
+    cloudcmd --username ${CLOUDCMD_USR} --password ${CLOUDCMD_PASS} --auth --root /mnt/ls
+
 fi
