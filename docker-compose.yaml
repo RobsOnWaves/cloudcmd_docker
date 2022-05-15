@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  cloud_commander:
+    image:  testimg
+    restart: always
+    environment:
+      CLOUDCMD_USR: your_username
+      CLOUDCMD_PASS: your_password
+
+    ports:
+      - 8000:8000
+    volumes:
+      - $PWD/host_folder:/mnt/fs
+  
