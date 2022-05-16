@@ -89,6 +89,12 @@ NB: the content of `./host_folder/` will be the data uploaded from the users and
 	      - $PWD/host_folder:/mnt/ls
 	```
 	
+	Launch the service:
+	
+	```console
+	docker-compose up -d
+	```
+	
 	Then, in a web browser, enter : `http://localhost:8000` to access to the service.
 
 2. Without authentication
@@ -111,6 +117,12 @@ NB: the content of `./host_folder/` will be the data uploaded from the users and
 	      - $PWD/host_folder:/mnt/ls
 	```
 		
+	Launch the service:
+	
+	```console
+	docker-compose up -d
+	```
+	
 	Then, in a web browser, enter : `http://localhost:8000` to access to the service.
 
 
