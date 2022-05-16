@@ -3,8 +3,7 @@
 if [[ -z "${CLOUDCMD_USR}" ]] || [[ -z "${CLOUDCMD_PASS}" ]]; then
     
     echo "WARNING: Cloud Commander launched without authentication"
-    
-    cloudcmd
+    cloudcmd --root /mnt/ls
     
 else
     echo "Authenticated launch"
