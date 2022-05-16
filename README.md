@@ -31,7 +31,7 @@ Now, this image is aimed to mount the service easily for two particular use case
 For all use cases, from the directory you will launch the service, create a `host_folder` directory:
 
 ```console
-$ mkdir host_folder
+mkdir host_folder
 ```
 
 NB: the content of `./host_folder/` will be the data uploaded from the users and/or that you want to be accessible for the users.
@@ -43,7 +43,7 @@ NB: the content of `./host_folder/` will be the data uploaded from the users and
 	Run this command:
 	
 	```console
-	$ docker run -v $PWD/host_folder:/mnt/ls \
+	docker run -v $PWD/host_folder:/mnt/ls \
 		-e "CLOUDCMD_USR=your_username" 	\
 		-e "CLOUDCMD_PASS=your_password" \
 		-p 8000:8000 -it --rm  robinatorondocker/cloudcmd
@@ -55,7 +55,7 @@ NB: the content of `./host_folder/` will be the data uploaded from the users and
 	Run this command:
 	
 	```console
-	$ docker run -v $PWD/host_folder:/mnt/ls \
+	docker run -v $PWD/host_folder:/mnt/ls \
 		-p 8000:8000 -it --rm  robinatorondocker/cloudcmd
 	```
 	Then, in a web browser, enter : `http://localhost:8000` to access to the service
